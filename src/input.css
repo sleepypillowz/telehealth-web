@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+li{
+  @apply hover:text-blue-500 font-semibold;
+}
+
+.msg {
+  @apply rounded-full bg-blue-500 text-white px-4 py-2 my-2 max-w-max;
+}
