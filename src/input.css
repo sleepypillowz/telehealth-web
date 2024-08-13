@@ -7,5 +7,5 @@ li{
 }
 
 .msg {
-  @apply rounded-full bg-blue-500 text-white px-4 py-2 my-2 max-w-max;
+  @apply max-w-max  rounded-xl bg-blue-500 text-white px-4 py-2 my-2 text-wrap break-words;
 }
