@@ -1,7 +1,7 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
-import Dropdown from './Dropdown';
+import Profile from './Profile';
 
 const Navbar = () => {
   return (
@@ -24,20 +24,15 @@ const Navbar = () => {
           <li>
             <NavLink to="/contact" className={({ isActive }) => isActive ? 'text-blue-600 font-bold' : 'text-gray-700'}>Contact</NavLink>
           </li>
-          <li>
-            <NavLink to="/chat" className={({ isActive }) => isActive ? 'text-blue-600 font-bold' : 'text-gray-700'}>Chat</NavLink>
-          </li>
         </ul>
 
         <ul className="flex flex-row items-center gap-x-16 pr-16">
           <li>
-            <button>
-              <svg className="h-6 w-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                fill="none" viewBox="0 0 20 18">
-                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-                  d="m1 14 3-3m-3 3 3 3m-3-3h16v-3m2-7-3 3m3-3-3-3m3 3H3v3"></path>
+            <Link to="/chat">
+              <svg class="h-6 w-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17h6l3 3v-3h2V9h-2M4 4h11v8H9l-3 3v-3H4V4Z" />
               </svg>
-            </button>
+            </Link>
           </li>
           <li>
             <button>
@@ -50,7 +45,7 @@ const Navbar = () => {
             </button>
           </li>
           <li>
-            <Dropdown />
+            <Profile />
           </li>
         </ul>
 

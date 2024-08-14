@@ -2,7 +2,15 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <p></p>
+    <div className='mx-16 flex justify-center rounded-md bg-gray-100 py-80 shadow-lg'>
+      <div className='flex flex-col'>
+        <h1 className='text-2xl'>
+          Telehealth Communication:
+        </h1>
+        <p>Enchancing Provider-Patient Experiences in the Modern Healthcare Era</p>
+      </div>
+    </div>
+
   );
 }
 

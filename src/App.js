@@ -4,6 +4,9 @@ import Navbar from "./Navbar";
 import Home from './Home';
 import About from './About';
 import Chat from './Chat';
+import Login from './Login';
+import Register from './Register';
+import Services from './Services';
 
 function App() {
   return (
@@ -15,6 +18,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/chat" element={<Chat />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/services" element={<Services />} />
       </Routes>
 
     </Router>
