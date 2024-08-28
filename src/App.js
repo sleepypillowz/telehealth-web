@@ -17,7 +17,7 @@ import SearchPatient from './components/pages/SearchPatient';
 
 function App() {
   return (
-    <Router>
+    <Router basename='/telehealth-web'>
       <div className="App">
         <Navbar />
       </div>
