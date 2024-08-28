@@ -6,6 +6,30 @@ li{
   @apply hover:text-blue-500 font-semibold;
 }
 
+table {
+  @apply w-full border-collapse border border-slate-400 bg-white text-sm shadow-sm dark:border-slate-500 dark:bg-slate-800
+}
+
+thead {
+  @apply bg-slate-50 dark:bg-slate-700
+}
+
+th {
+  @apply border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200 text-left
+}
+
+td {
+  @apply border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400
+}
+
+input, select{
+  @apply block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500
+}
+
+.btn {
+  @apply rounded-lg border bg-gray-100 p-4 shadow-sm text-slate-900
+}
+
 .msg {
   @apply max-w-full rounded-xl bg-blue-500 text-white px-4 py-2 my-2 break-words;
 }
@@ -14,3 +38,8 @@ li{
 .services {
   @apply p-4 mx-4 text-xl bg-gray-100 rounded-full shadow-md hover:scale-110;
 }
+
+.table-container {
+  @apply px-4 py-8 sm:px-8
+}
+

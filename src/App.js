@@ -1,12 +1,14 @@
-import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from "./Navbar";
-import Home from './Home';
-import About from './About';
-import Chat from './Chat';
-import Login from './Login';
-import Register from './Register';
-import Services from './Services';
+import Navbar from "./components/Navbar";
+import Home from './components/pages/Home';
+import Login from './components/pages/Login';
+import Register from './components/pages/Register';
+import Patients from './components/pages/Patients';
+import Appointment from './components/pages/Appointment';
+import Medicines from './components/pages/Medicines';
+import AddPatient from './components/pages/AddPatient';
+import AddAppointment from './components/pages/AddAppointment';
+import SearchPatient from './components/pages/SearchPatient';
 
 function App() {
   return (
@@ -16,11 +18,14 @@ function App() {
       </div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/chat" element={<Chat />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/services" element={<Services />} />
+        <Route path="/patients" element={<Patients />} />
+        <Route path="/appointment" element={<Appointment />} />
+        <Route path="/medicines" element={<Medicines />} />
+        <Route path="/addpatient" element={<AddPatient />} />
+        <Route path="/addappointment" element={<AddAppointment />} />
+        <Route path="/searchpatient" element={<SearchPatient />} />
       </Routes>
 
     </Router>

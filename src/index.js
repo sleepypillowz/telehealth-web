@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './output.css';
+<script src="https://kit.fontawesome.com/c9fdc5e2e7.js" crossorigin="anonymous"></script>
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
