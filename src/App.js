@@ -20,22 +20,20 @@ function App() {
     <Router basename='/telehealth-web'>
       <div className="App">
         <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/patients" element={<Patients />} />
+          <Route path="/appointment" element={<Appointment />} />
+          <Route path="/diagnosis" element={<Diagnosis />} />
+          <Route path="/medicines" element={<Medicines />} />
+          <Route path="/addpatient" element={<AddPatient />} />
+          <Route path="/addappointment" element={<AddAppointment />} />
+          <Route path="/addmedicine" element={<AddMedicine />} />
+          <Route path="/searchpatient" element={<SearchPatient />} />
+        </Routes>
       </div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/patients" element={<Patients />} />
-        <Route path="/appointment" element={<Appointment />} />
-        <Route path="/diagnosis" element={<Diagnosis />} />
-        <Route path="/medicines" element={<Medicines />} />
-
-        <Route path="/addpatient" element={<AddPatient />} />
-        <Route path="/addappointment" element={<AddAppointment />} />
-        <Route path="/addmedicine" element={<AddMedicine />} />
-        <Route path="/searchpatient" element={<SearchPatient />} />
-      </Routes>
     </Router>
   );
 }
