@@ -1,37 +1,12 @@
+import Table from '../organisms/Table';
+
 const Patients = () => {
-  return (
-    <>
+  const headers = ['Patient ID', 'Last Name', 'First Name', 'Age', 'Gender', 'Mobile Number', 'Birthday'];
+  const rows = [
+    ['001', 'Doe', 'John', '45', 'Male', '09691234567', '2002-08-27']
+  ];
 
-      <div className="table-container">
-        <table>
-          <thead>
-            <th>Patient ID</th>
-            <th>Last Name</th>
-            <th>First Name</th>
-            <th>Age</th>
-            <th>Gender</th>
-            <th>Mobile Number</th>
-            <th>Birthday</th>
-
-          </thead>
-          <tbody>
-            <tr>
-              <td>001</td>
-              <td>Doe</td>
-              <td>John</td>
-              <td>45</td>
-              <td>Male</td>
-              <td>09691234567</td>
-              <td>2002-08-27</td>
-            </tr>
-          </tbody>
-
-        </table>
-      </div>
-
-
-    </>
-  );
+  return <Table headers={headers} rows={rows} />;
 }
 
 export default Patients;

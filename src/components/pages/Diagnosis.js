@@ -1,34 +1,12 @@
-const Diagnosis = () => {
-  return (
-    <>
+import Table from '../organisms/Table';
 
-      <div className="table-container">
-        <table>
-          <thead>
-            <th>Diagnosis</th>
-            <th>Date of Admission</th>
+const Medicines = () => {
+  const headers = ['Patient', 'Diagnosis', 'Date of Admission'];
+  const rows = [
+    ['John Doe', 'Hypertension', '2024-12-31']
+  ];
 
-          </thead>
-          <tbody>
-            <tr>
-              <td>001</td>
-              <td>Doe</td>
-              <td>John</td>
-              <td>45</td>
-              <td>Male</td>
-              <td>09691234567</td>
-              <td>Hypertension</td>
-              <td>2024-08-27</td>
-              <td>2002-08-27</td>
-            </tr>
-          </tbody>
-
-        </table>
-      </div>
-
-
-    </>
-  );
+  return <Table headers={headers} rows={rows} />;
 }
 
-export default Diagnosis;
+export default Medicines;

@@ -1,32 +1,12 @@
-const Appointment = () => {
-  return (
-    <>
-      <div className="table-container">
-        <table>
-          <thead>
-            <th>Appointment ID</th>
-            <th>Patient</th>
-            <th>Date</th>
-            <th>Time</th>
-            <th>Service</th>
-            <th>Status</th>
-          </thead>
-          <tbody>
-            <tr>
-              <td>001</td>
-              <td>John Doe</td>
-              <td>2024-09-01</td>
-              <td>10:00 AM</td>
-              <td>Checkup</td>
-              <td>Scheduled</td>
-            </tr>
-          </tbody>
+import Table from '../organisms/Table';
 
-        </table>
-      </div>
+const Patients = () => {
+  const headers = ['Appointment ID', 'Patient', 'Date', 'Time', 'Service', 'Status'];
+  const rows = [
+    ['001', 'John Doe', '2024-09-01', '10:00 AM', 'Checkup', 'Scheduled']
+  ];
 
-    </>
-  );
+  return <Table headers={headers} rows={rows} />;
 }
 
-export default Appointment;
+export default Patients;

@@ -8,6 +8,7 @@ const Home = () => {
         <Link to="/addpatient" className="btn">Add Patient</Link>
         <Link to="/searchpatient" className="btn" >Search Patient</Link>
         <Link to="/addappointment" className="btn" >Add Appointment</Link>
+        <Link to="/addmedicine" className="btn" >Add Medicine</Link>
       </div >
 
     </>
