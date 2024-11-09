@@ -19,9 +19,9 @@ const Register = () => {
             <label htmlFor="Confirmation" className="mb-2 block text-sm font-medium text-gray-900">Confirmation</label>
             <input type="password" name="Confirmation" id="Confirmation" placeholder="••••••••" required />
           </div>
-          <button type="submit" className="w-full rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300">Register</button>
+          <button type="submit" className="w-full rounded-lg bg-sky-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-sky-800 focus:outline-none focus:ring-4 focus:ring-sky-300">Register</button>
           <div className="text-sm font-medium text-gray-500">
-            Have an account? <Link to="/login" className="text-blue-700 hover:underline">Login</Link>
+            Have an account? <Link to="/login" className="text-sky-700 hover:underline">Login</Link>
           </div>
         </htmlForm>
       </div>

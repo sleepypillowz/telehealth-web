@@ -1,6 +1,6 @@
-import Table from '../organisms/Table';
+import Table from '../../organisms/Table';
 
-const Medicines = () => {
+const Diagnosis = () => {
   const headers = ['Patient', 'Diagnosis', 'Date of Admission'];
   const rows = [
     ['John Doe', 'Hypertension', '2024-12-31']
@@ -9,4 +9,4 @@ const Medicines = () => {
   return <Table headers={headers} rows={rows} />;
 }
 
-export default Medicines;
+export default Diagnosis;

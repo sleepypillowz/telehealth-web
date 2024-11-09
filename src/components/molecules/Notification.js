@@ -1,32 +1,59 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { FaBell } from 'react-icons/fa';
 
-const Dropdown = () => {
+function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [notifications] = useState([
+    { id: 1, message: 'New appointment scheduled for John Doe.' },
+    { id: 2, message: 'Patient report for Jane Smith is ready.' },
+    { id: 3, message: 'New prescription available for Michael Johnson.' },
+  ]);
+  const unreadCount = notifications.length;
 
-  const toggleDropdown = () => setIsOpen(!isOpen);
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
-    <div className="relative inline-block text-left">
-      <button onClick={toggleDropdown}>
-        <svg type="button" className="h-6 w-6 text-gray-800 dark:text-white" aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 21">
-          <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-            d="M8 3.464V1.1m0 2.365a5.338 5.338 0 0 1 5.133 5.368v1.8c0 2.386 1.867 2.982 1.867 4.175C15 15.4 15 16 14.462 16H1.538C1 16 1 15.4 1 14.807c0-1.193 1.867-1.789 1.867-4.175v-1.8A5.338 5.338 0 0 1 8 3.464ZM4.54 16a3.48 3.48 0 0 0 6.92 0H4.54Z">
-          </path>
-        </svg>
-      </button>
-      {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 rounded border border-gray-200 bg-white shadow-lg">
-          <ul>
-            <li>
-              <Link to="/Login" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">Login</Link>
-            </li>
-          </ul>
-        </div>
-      )}
-    </div>
-  );
-};
+    <header className="flex items-center justify-between p-6">
+      {/* Notification Bell Icon */}
+      <div className="relative">
+        <button
+          onClick={toggleDropdown}
+          className="relative flex items-center text-white focus:outline-none"
+        >
+          <FaBell className="text-2xl text-black" />
+          
+          {/* Notification Badge */}
+          {unreadCount > 0 && (
+            <span className="absolute right-0 top-0 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-red-500 text-xs text-white">
+              {unreadCount}
+            </span>
+          )}
+        </button>
 
-export default Dropdown;
+        {/* Notification Dropdown */}
+        {isOpen && (
+          <div className="absolute right-0 z-10 max-h-60 w-80 overflow-y-auto rounded-lg bg-white p-4 shadow-lg">
+            <h3 className="text-lg font-semibold">Notifications</h3>
+            <ul className="mt-4 space-y-2">
+              {notifications.map((notification) => (
+                <li key={notification.id} className="border-b p-2 last:border-b-0">
+                  <p className="text-gray-700">{notification.message}</p>
+                </li>
+              ))}
+            </ul>
+            <button
+              onClick={() => setIsOpen(false)}
+              className="mt-4 w-full text-center text-blue-600 hover:underline"
+            >
+              Close
+            </button>
+          </div>
+        )}
+      </div>
+    </header>
+  );
+}
+
+export default Navbar;

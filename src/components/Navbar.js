@@ -6,26 +6,19 @@ import Profile from './molecules/Profile';
 const Navbar = () => {
   return (
     <>
-      <nav className="flex items-center justify-between rounded-lg bg-gray-100 p-8 shadow-md">
-        <h1 className="pl-16 text-2xl font-bold">Telehealth</h1>
-
-
+      <nav className="flex items-center justify-between rounded-lg bg-gray-100 px-4 py-0 shadow-md">
+        <NavLink to="/" className='flex flex-row items-center'>
+        <img className="h-16 w-16" src={`${process.env.PUBLIC_URL}/logo.png`} alt="logo"/>
+        <h1 className="items-center text-2xl font-bold">Malibiran Medical Clinic</h1>
+        </NavLink>
+        
         <ul className="flex flex-row gap-x-16">
 
           <li>
             <NavLink to="/" className={({ isActive }) => isActive ? 'text-blue-600 font-bold' : 'text-gray-700'}>Home</NavLink>
           </li>
           <li>
-            <NavLink to="/patients" className={({ isActive }) => isActive ? 'text-blue-600 font-bold' : 'text-gray-700'}>Patients</NavLink>
-          </li>
-          <li>
-            <NavLink to="/appointment" className={({ isActive }) => isActive ? 'text-blue-600 font-bold' : 'text-gray-700'}>Appointment</NavLink>
-          </li>
-          <li>
-            <NavLink to="/diagnosis" className={({ isActive }) => isActive ? 'text-blue-600 font-bold' : 'text-gray-700'}>Diagnosis</NavLink>
-          </li>
-          <li>
-            <NavLink to="/medicines" className={({ isActive }) => isActive ? 'text-blue-600 font-bold' : 'text-gray-700'}>Medicines</NavLink>
+            <NavLink to="/admin" className={({ isActive }) => isActive ? 'text-blue-600 font-bold' : 'text-gray-700'}>Admin</NavLink>
           </li>
         </ul>
 
